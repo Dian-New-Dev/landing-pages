@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
                 <p className="text-gray-300">
                     Mais customizável do que grandes plataformas, mais
                     profissional do que redes sociais e mais barato
-                    do que um website clássico, a Landing Page é sua aliada
+                    do que um website clássico, a Landing Page é a aliada perfeita 
                     para o crescimento dos seus negócios.
                 </p>
 
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="pr-4 border-b border-r border-gray-600/50 relative w-[50%] h-full">
-                <img className="w-[100%]" src={`./assets/images/hero.png`} alt="Imagem de mulher sorridente usando óculos de realidade virtual interagindo com telas holográficas flutando ao seu redor" />
+                <img className="w-[100%] brightness-90" src={`./assets/images/hero.png`} alt="Imagem de mulher sorridente usando óculos de realidade virtual interagindo com telas holográficas flutando ao seu redor" />
 
             </div>
         </div>

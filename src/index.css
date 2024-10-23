@@ -39,3 +39,12 @@
 .escala {
     transform: scale(1.2)
 }
+
+.centralizar-absoluto {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.formato-footer-div {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
