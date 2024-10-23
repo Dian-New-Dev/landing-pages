@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero: React.FC = () => {
     return (
-        <div id="hero" className="escala flex items-end gap-4 font-medium">
+        <div id="hero" className=" flex items-end gap-4 font-medium">
             <div className="p-4 border-t border-l border-gray-600/50 w-1/2 text-white flex flex-col gap-6 items-start">
                 <h1 className="text-5xl font-bold">
                     Landing Page: o poder do marketing virtual

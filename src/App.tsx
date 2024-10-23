@@ -7,8 +7,19 @@ const App: React.FC = () => {
         <div className="max-w-[1400px] m-auto">
 
             <Topbar />
+            <div className="no-scrollbar escala snap-x snap-mandatory overflow-x-auto flex gap-32  w-full">
+                <div className="snap-center flex-shrink-0 w-[100%]">
+                    <Hero />    
+                </div>
+                
+                <div className="snap-center flex-shrink-0 w-[100%]">
+                    <Hero />    
+                </div>
+                   
 
-            <Hero /> 
+                   
+            </div>
+            
 
             <Footer />
         </div>
