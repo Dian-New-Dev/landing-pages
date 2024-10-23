@@ -1,20 +1,13 @@
-import React, {useState} from "react";
-import Glasmorfismo from "./componentes/Glasmorfismo";
-import NeonBoxes from "./componentes/NeonBoxes";
-import GetImg from "./componentes/GetImg";
-
+import React from "react";
+import Topbar from "./componentes/Topbar";
+import Hero from "./componentes/Hero";
 const App: React.FC = () => {
-
-    const [index] = useState<number>(3)
-
     return (
-        <div>
-            {index === 1 && <Glasmorfismo />}
+        <div className="max-w-[1400px] mx-auto">
 
-            {index === 2 && <NeonBoxes />}
+            <Topbar />
 
-            {index === 3 && <GetImg />}
-            
+            <Hero />
         </div>
     );
 }

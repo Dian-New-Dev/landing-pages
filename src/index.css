@@ -4,6 +4,8 @@
 
 * {
     min-width: 0;
+    box-sizing: border-box;
+    /* border: 1px solid yellow; */
   
 }
 
@@ -23,3 +25,13 @@
 }
 
 /* 203b28 */
+
+.acme-regular {
+    font-family: "Acme", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.escala-logo {
+    transform: scale(0.3)
+}
