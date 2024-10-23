@@ -1,32 +1,19 @@
-# Passos
+# Galeria de Landing Pages
 
-1) npm add react-router-dom
+## Descrição
 
-2) fixar vulnerabilidades
+- Portal desenvolvido com React e Tailwind para reunir em um único link todas as landing pages por mim desenvolvidas.
 
-3) criar pasta pages e colocar páginas individuais lá
+## Funcionalidades Pretendidas
 
-4) import createBroswerRouter no arquivo principal
+- Design moderno;
+- Listagem de LPs em cards miniatura clicáveis;
+- Exibicação de LP clicada em sistema carrosel;
+- Tags temáticas para filtragem de LPs;
 
-5) const router = createBroswerRouter([]) para estabelecer rotas
+## Tech Stack
 
-6) add routerprovided no import do createBroswerROuter
-
-7) faz RouterProvider router={router} o entry point
-
-8) adiciona rotas no array
-
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <HomePage />
-    },
-    {
-        path: '/profiles', // url
-        element: <ProfilesPage /> //respectivo componente
-    }
-]);
-
-9) Faz componente de: errorElement: <div>404 Not Found</div>, abaixo de element: <HOmePage />
-
-10) 
+- Vite;
+- React;
+- Tailwind;
+- Typescript;
