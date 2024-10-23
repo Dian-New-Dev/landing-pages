@@ -3,6 +3,23 @@
 @tailwind utilities;
 
 * {
-  min-width: 0;
+    min-width: 0;
   
 }
+
+.div-circulo {
+    clip-path: circle(50% at 50% 50%);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.borda-neon {
+    color: #e0cece; /* Set text color to white */
+    box-shadow: 0 0 10px #56f709, /* Neon green glow */
+                 0 0 20px #56f709, /* Larger glow */
+                 0 0 30px #56f709; /* Even larger glow */
+}
+
+/* 203b28 */
