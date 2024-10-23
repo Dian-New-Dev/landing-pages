@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
 
 
                 <div className="flex flex-col gap-2">
-                    <button className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Conferir nosso repertório →</button>
+                    <button className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Conferir nosso repertório <span className="text-[#d63b67]">➤</span></button>
                     <button className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Fazer um orçamento ☎ </button>
                 </div>
 

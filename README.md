@@ -17,3 +17,5 @@
 - React;
 - Tailwind;
 - Typescript;
+
+## A prosseguir

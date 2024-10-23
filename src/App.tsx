@@ -8,7 +8,7 @@ const App: React.FC = () => {
 
             <Topbar />
 
-            <Hero />
+            <Hero /> 
 
             <Footer />
         </div>
