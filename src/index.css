@@ -77,3 +77,27 @@ p, a {
     clip-path: circle(50% at 50% 50%);
 
 }
+
+.grid-valores {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "a b"
+    "c d";
+}
+
+.item-grid1 {
+    grid-area: a;
+}
+  
+.item-grid2 {
+    grid-area: b;
+}
+  
+.item-grid3 {
+    grid-area: c;
+}
+  
+.item-grid4 {
+    grid-area: d;
+}
