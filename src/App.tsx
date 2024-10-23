@@ -16,7 +16,7 @@ const App: React.FC = () => {
 
             <Topbar />
             
-            <div id="scroller-horizontal" className="no-scrollbar escala snap-x snap-mandatory overflow-x-auto flex gap-32  w-full">
+            <div id="scroller-horizontal" className="no-scrollbar escala snap-x snap-mandatory overflow-x-auto flex items-center gap-32  w-full">
                 <div className="snap-center flex-shrink-0 w-[100%]">
                     <Hero />    
                 </div>
