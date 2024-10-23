@@ -59,3 +59,8 @@
         scrollbar-width: none;  /* Firefox */
   }
 }
+
+.scrollMarker-forma {
+    clip-path: circle(50% at 50% 50%);
+
+}
