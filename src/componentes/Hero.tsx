@@ -28,9 +28,9 @@ const Hero: React.FC = () => {
                     <button className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Fazer um orçamento ☎ </button>
                 </div>
 
-                <div className="flex gap-2 text-sm text-gray-400">
-                    <p>✓ Orçamento sem compromisso</p>
-                    <p>✓ Preços extremamente acessíveis</p>
+                <div className="flex items-center gap-3 text-sm text-gray-400">
+                    <span className="text-lime-700 font-bold text-xl">✓</span><p className="ml-[-10px]">Orçamento sem compromisso</p>
+                    <span className="text-lime-700 font-bold text-xl">✓</span><p className="ml-[-10px]">Preços extremamente acessíveis</p>
                 </div>
             </div>
 
