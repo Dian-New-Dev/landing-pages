@@ -2,8 +2,8 @@ import React from "react";
 
 const Hero: React.FC = () => {
     return (
-        <div id="hero" className="flex font-medium">
-            <div className="w-1/2 text-white flex flex-col gap-6 items-start">
+        <div id="hero" className="escala flex items-end gap-4 font-medium">
+            <div className="p-4 border-t border-l border-gray-600/50 w-1/2 text-white flex flex-col gap-6 items-start">
                 <h1 className="text-5xl font-bold">
                     Landing Page: o poder do marketing virtual
                     a um click de distância.
@@ -14,19 +14,15 @@ const Hero: React.FC = () => {
                     de ferramentas para captar clientes.
                 </h2>
 
-                <p className="text-gray-300">
-                    O emprego de Landing Pages permite apresentar
-                    informações relevantes sobre seu produto ou serviço
-                    de forma concisa, ágil e focada: em segundos o visitante
-                    sabe o que você vende, a qualidade do seu serviço e as formas
-                    de contato.
-                </p>
+
                 <p className="text-gray-300">
                     Mais customizável do que grandes plataformas, mais
                     profissional do que redes sociais e mais barato
                     do que um website clássico, a Landing Page é sua aliada
                     para o crescimento dos seus negócios.
                 </p>
+
+
                 <div className="flex flex-col gap-2">
                     <button className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Conferir nosso repertório →</button>
                     <button className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Fazer um orçamento ☎ </button>
@@ -38,7 +34,8 @@ const Hero: React.FC = () => {
                 </div>
             </div>
 
-            <div className="w-1/2">
+            <div className="pr-4 border-b border-r border-gray-600/50 relative w-[50%] h-full">
+                <img className="w-[100%]" src={`./assets/images/hero.png`} alt="Imagem de mulher sorridente usando óculos de realidade virtual interagindo com telas holográficas flutando ao seu redor" />
 
             </div>
         </div>
