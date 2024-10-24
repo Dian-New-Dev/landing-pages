@@ -101,3 +101,13 @@ p, a {
 .item-grid4 {
     grid-area: d;
 }
+
+.grid-responsivo-thumbs {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.grid-responsivo-tags {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}

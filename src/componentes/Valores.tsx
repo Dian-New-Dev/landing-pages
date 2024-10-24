@@ -50,7 +50,7 @@ const Valores: React.FC = () => {
 
     return (
         <div className="px-32 text-white flex flex-col gap-4">
-            <h3 className="text-5xl">Escolha seu plano</h3>
+            <h3 className="text-5xl text-center">Escolha seu plano</h3>
 
             <div className="flex gap-16">
                 {renderizar}

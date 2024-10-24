@@ -9,7 +9,7 @@ const Topbar: React.FC = () => {
             </div>
 
             <div className="w-1/2 flex justify-end gap-4 pr-6">
-                <a className="hover:text-cyan-200 hover:underline" href="">Portfolio</a>
+                <a className="hover:text-cyan-200 hover:underline" href="">Portfólio</a>
                 <a className="hover:text-cyan-200 hover:underline" href="">Valores</a>
                 <a className="hover:text-cyan-200 hover:underline" href="">Contato</a>
             </div>
