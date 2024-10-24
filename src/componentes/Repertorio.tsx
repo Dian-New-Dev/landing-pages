@@ -18,17 +18,7 @@ const Repertorio: React.FC = () => {
                 <div id="painel-esquerdo" className="w-[40%] p-4 flex flex-col border-r border-gray-600/50 gap-4 h-full">
                     <div id="miniaturas-wrapper" className="flex gap-4 border-b border-gray-600/50">
                         <div id="miniaturas" className="grid-responsivo-thumbs h-[300px] w-full overflow-y-scroll no-scrollbar gap-4 p-2">
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />
-                            <img className="" src={`./assets/thumbnails/lpt-2.png`} alt="" />   
+                            
                         </div>
 
                         <div id="scroll-buttons" className="flex flex-col justify-around">
