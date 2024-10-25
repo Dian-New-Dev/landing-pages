@@ -58,19 +58,24 @@ const Repertorio: React.FC = () => {
 
     },[tagADestacar])
 
+    // logica para renderizar lp da thumbnail clicada
 
+    const [srcLP, setSrcLP] = useState<string>()
 
+    function handleThumbClick(src:string) {
+        paginas.forEach((item) => {
+            
+                if (item.thumbnail === src) {
+                    setSrcLP(item.link)
+                }
+            
+        })
+        
+    }
 
     useEffect(() => {
-        console.log(listaThumbs)
-    }, [listaThumbs])
-
-
-
-
-
-
-
+        console.log(srcLP)
+    }, [srcLP])
 
 
     return (
@@ -91,8 +96,9 @@ const Repertorio: React.FC = () => {
                     <div id="miniaturas-wrapper" className="flex gap-4 border-b border-gray-600/50">
                         <div id="miniaturas" className="grid-responsivo-thumbs h-[300px] w-full overflow-y-scroll no-scrollbar gap-4 p-2">
                             {listaThumbs.map((item: string, index: number) => (
-                                
-                                <img key={index} src={item} alt="Thumbnail clicável para visualizar landing page" />    
+                                <button key={index} onClick={() => handleThumbClick(item)}>
+                                    <img key={index} src={item} alt="Thumbnail clicável para visualizar landing page" />    
+                                </button>
                             ))}  
                         </div>
 
@@ -117,9 +123,20 @@ const Repertorio: React.FC = () => {
                     </div>
                 </div>
                 
-                <div id="painel-direito" className="w-[60%] p-4">
-                <iframe id="sites-iframe" className="w-full h-full" src="https://dian-new-dev.github.io/LPT-3/"></iframe>
+                <div id="painel-direito" className={`background-placeholder  relative w-[60%] p-4`}>
+                    <div className="absolute  top-0 left-0 w-full h-full grid place-items-center p-4">
+                        {!srcLP && (
+                            <p className={``}>Selecione uma miniatura ao lado para visualizá-la aqui.</p>
 
+                        )}
+                    </div>
+                    
+                    <iframe id="sites-iframe" className={`${srcLP !== '' ? 'block' : 'hidden'} static z-10 w-full h-full`} src={srcLP}></iframe>
+
+                    {srcLP && (<a className="z-10 absolute bottom-10 right-10 bg-green-600 p-2 rounded-lg pointer-events-auto opacity-50 hover:opacity-100" target="_blank" href={srcLP}>
+                        Visitar
+                    </a>
+                    )}
                 </div>
             </div>
 
