@@ -37,23 +37,23 @@ const Repertorio: React.FC = () => {
 
     useEffect(() => {
         setListaThumbs([])
-        if (tagADestacar.length === 0) {
+        if (tagADestacar.length === 0) { //se nenhuma tag selecionada, renderiza todas thumbs
             paginas.forEach((item) => {
                 setListaThumbs(prev => {
                     return [... prev, item.thumbnail]
                 })
             })
-        } else {
+        } else { // se tags selecionadas, fitra thumbs que tenham as tags
+            const thumbsPuras = new Set<string>();
             paginas.forEach((item) => {
                 item.tags.forEach((item2) => {
                     if (tagADestacar.includes(item2)) {
-                        setListaThumbs(prev => {
-                            return [... prev, item.thumbnail]
-                        })
+                            thumbsPuras.add(item.thumbnail)
                     }
                 })
             });
-            //precisa remover thumbs repetidas
+            const thumbsFiltradas: string[] = Array.from(thumbsPuras)
+            setListaThumbs(thumbsFiltradas)
         }
 
     },[tagADestacar])
