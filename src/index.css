@@ -112,7 +112,7 @@ p, a {
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
-.gu {
-    scroll-snap-type: x var(--tw-scroll-snap-strictness);
+.fonte-padrao {
+    font-family: initial;
 }
 

@@ -1,6 +1,16 @@
 import React from "react";
 
-const Hero: React.FC = () => {
+interface props {
+    setScrollIndex: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const Hero: React.FC<props> = ({setScrollIndex}) => {
+
+    function destacarMarcador(numero:number) {
+        setScrollIndex(numero)
+    }
+
+
     return (
         <div id="hero" className=" flex items-end gap-4 font-medium">
             <div className="p-4 border-t border-l border-gray-600/50 w-1/2 text-white flex flex-col gap-6 items-start">
@@ -24,8 +34,16 @@ const Hero: React.FC = () => {
 
 
                 <div className="flex flex-col gap-2">
-                    <button className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Conferir nosso repertório <span className="text-[#d63b67]">➤</span></button>
-                    <button className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Fazer um orçamento ☎ </button>
+                    <button onClick={() => destacarMarcador(2)} className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">
+                        <a href="#repertorio">
+                            <p>Conferir nosso repertório <span className="text-[#d63b67]">➤</span></p>
+                        </a>
+                    </button>
+
+                    <a href="#contato">
+                        <button onClick={() => destacarMarcador(4)} className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Fazer um orçamento <span className="fonte-padrao">☎</span> </button>
+                    </a>
+
                 </div>
 
                 <div className="flex items-center gap-3 text-sm text-gray-400">
