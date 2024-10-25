@@ -4,7 +4,7 @@ import paginas from "../data/paginas";
 const Repertorio: React.FC = () => {
     
     //gerar tags
-    const tagsPuras = new Set();
+    const tagsPuras = new Set<string>();
     
     paginas.forEach((item) => {
         item.tags.forEach((item2) => {
@@ -12,23 +12,11 @@ const Repertorio: React.FC = () => {
         })
 
     })
-    const tagsFiltradas = Array.from(tagsPuras);
+    const tagsFiltradas: string[] = Array.from(tagsPuras);
 
     // renderizar tags
 
-    const [tags, setTags] = useState<JSX.Element[]>([]);
-    useEffect(() => {
-        renderizarTags();
-    }, [])
-
-    function renderizarTags() {
-        const tagsARenderizar = tagsFiltradas.map((item, index) => {
-            return (
-                <button key={index} onClick={() => handleClickedTag(item)} className="p-1 bg-cyan-600 rounded-lg">{item}</button>
-            )
-        })
-        setTags(tagsARenderizar)
-    }
+    
 
     // logica para processar click nas tags
     
@@ -37,10 +25,8 @@ const Repertorio: React.FC = () => {
     function handleClickedTag(tag:string) {
         setTagADestacar((prev) => {
             if (!prev.includes(tag)) {
-                // Se não tem a tag, adiciona
                 return [...prev, tag];
             } else {
-                // Se já tem, remove
                 return prev.filter((item) => item !== tag);
             }
         });
@@ -50,7 +36,6 @@ const Repertorio: React.FC = () => {
     useEffect(() => {
         console.log(tagADestacar)
     }, [tagADestacar])
-    //destacar tag clicada
 
 
 
@@ -88,7 +73,11 @@ const Repertorio: React.FC = () => {
 
                     
                     <div id="tags" className="grid-responsivo-tags p-2 gap-4">
-                        {tags}
+                        {tagsFiltradas.map((item: string, index: number) => (
+                            <button key={index} onClick={() => handleClickedTag(item)} className={`p-1 ${tagADestacar.includes(item) ? 'border scale-110' : 'border-0 scale-100'} bg-cyan-600 rounded-lg`}>
+                                {item}
+                            </button>
+                        ))}
                     </div>
                 </div>
                 
