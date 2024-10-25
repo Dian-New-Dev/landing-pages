@@ -1,6 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import paginas from "../data/paginas";
 
 const Repertorio: React.FC = () => {
+    
+    //gerar tags
+    const tagsPuras = new Set();
+    
+    paginas.forEach((item) => {
+        item.tags.forEach((item2) => {
+            tagsPuras.add(item2)
+        })
+
+    })
+    const tagsFiltradas = Array.from(tagsPuras);
+
+    // renderizar tags
+
+    const [tags, setTags] = useState<JSX.Element[]>([]);
+    useEffect(() => {
+        renderizarTags();
+    }, [])
+
+    function renderizarTags() {
+        const tagsARenderizar = tagsFiltradas.map((item, index) => {
+            return (
+                <button key={index} onClick={() => handleClickedTag(item)} className="p-1 bg-cyan-600 rounded-lg">{item}</button>
+            )
+        })
+        setTags(tagsARenderizar)
+    }
+
+    // logica para processar click nas tags
+
+    function handleClickedTag(tag) {
+        console.log(tag)
+    }
+
+
+
+
     return (
         <div className="relative h-full rounded-[50px] p-4 text-white  flex flex-col gap-2">
             <div className="relative flex flex-col gap-2 ">
@@ -32,11 +70,7 @@ const Repertorio: React.FC = () => {
 
                     
                     <div id="tags" className="grid-responsivo-tags p-2 gap-4">
-                        <button className="p-1 bg-cyan-600 rounded-lg">Tag1</button>
-                        <button className="p-1 bg-green-600 rounded-lg">Tag2</button>
-                        <button className="p-1 bg-red-600 rounded-lg">Tag3</button>
-                        <button className="p-1 bg-amber-600 rounded-lg">Tag4</button>
-                        <button className="p-1 bg-blue-600 rounded-lg">Tag5</button>
+                        {tags}
                     </div>
                 </div>
                 
