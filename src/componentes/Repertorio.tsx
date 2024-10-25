@@ -31,17 +31,35 @@ const Repertorio: React.FC = () => {
     }
 
     // logica para processar click nas tags
+    
+    const [tagADestacar, setTagADestacar] = useState<string[]>([])
 
-    function handleClickedTag(tag) {
-        console.log(tag)
+    function handleClickedTag(tag:string) {
+        setTagADestacar((prev) => {
+            if (!prev.includes(tag)) {
+                // Se não tem a tag, adiciona
+                return [...prev, tag];
+            } else {
+                // Se já tem, remove
+                return prev.filter((item) => item !== tag);
+            }
+        });
+        
     }
+
+    useEffect(() => {
+        console.log(tagADestacar)
+    }, [tagADestacar])
+    //destacar tag clicada
+
+
 
 
 
 
     return (
         <div className="relative h-full rounded-[50px] p-4 text-white  flex flex-col gap-2">
-            <div className="relative flex flex-col gap-2 ">
+            <div className="z-10 relative flex flex-col gap-2 ">
                 <h3 className="text-5xl font-bold">Nosso Repertório</h3>
                 <p className="text-gray-300">Landing Pages desenvolvidas com vários estilos,
                     diversas ferramentas e  inúmeras tecnologias,
@@ -52,7 +70,7 @@ const Repertorio: React.FC = () => {
 
             </div>
 
-            <div className="flex gap-4 h-full bg-[#222a35]/50 border border-gray-600/50 rounded-[40px] p-2">
+            <div className="relative z-10 flex gap-4 h-full bg-[#222a35]/50 border border-gray-600/50 rounded-[40px] p-2">
                 <div id="painel-esquerdo" className="w-[40%] p-4 flex flex-col border-r border-gray-600/50 gap-4 h-full">
                     <div id="miniaturas-wrapper" className="flex gap-4 border-b border-gray-600/50">
                         <div id="miniaturas" className="grid-responsivo-thumbs h-[300px] w-full overflow-y-scroll no-scrollbar gap-4 p-2">
@@ -80,7 +98,7 @@ const Repertorio: React.FC = () => {
                 </div>
             </div>
 
-            <div id="margem" className="absolute top-0 left-0 w-full h-full flex">
+            <div id="margem" className="absolute z-0 top-0 left-0 w-full h-full flex">
                     <div className="w-1/2 border-t border-l border-gray-600/50"></div>
                     <div className="w-1/2 border-b border-r border-gray-600/50"></div>
 
