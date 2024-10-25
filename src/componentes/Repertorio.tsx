@@ -36,11 +36,26 @@ const Repertorio: React.FC = () => {
     const [listaThumbs, setListaThumbs] = useState<string[]>([])
 
     useEffect(() => {
-        paginas.forEach((item) => {
-            setListaThumbs(prev => {
-                return [... prev, item.thumbnail]
+        setListaThumbs([])
+        if (tagADestacar.length === 0) {
+            paginas.forEach((item) => {
+                setListaThumbs(prev => {
+                    return [... prev, item.thumbnail]
+                })
             })
-        })
+        } else {
+            paginas.forEach((item) => {
+                item.tags.forEach((item2) => {
+                    if (tagADestacar.includes(item2)) {
+                        setListaThumbs(prev => {
+                            return [... prev, item.thumbnail]
+                        })
+                    }
+                })
+            });
+            //precisa remover thumbs repetidas
+        }
+
     },[tagADestacar])
 
 
