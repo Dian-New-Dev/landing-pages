@@ -113,10 +113,12 @@ const Repertorio: React.FC = () => {
                         </div>
                     </div>
 
+                    <p>Filtrar por tags:</p>
+
                     
-                    <div id="tags" className="grid-responsivo-tags p-2 gap-4">
+                    <div id="tags" className="grid-responsivo-tags p-2 gap-2">
                         {tagsFiltradas.map((item: string, index: number) => (
-                            <button key={index} onClick={() => handleClickedTag(item)} className={`p-1 ${tagADestacar.includes(item) ? 'border scale-110' : 'border-0 scale-100'} bg-cyan-600 rounded-lg`}>
+                            <button key={index} onClick={() => handleClickedTag(item)} className={`p-1 ${tagADestacar.includes(item) ? 'bg-cyan-600 font-normal' : 'bg-cyan-900 font-thin'}  rounded-lg`}>
                                 {item}
                             </button>
                         ))}
@@ -125,12 +127,12 @@ const Repertorio: React.FC = () => {
                 
                 <div id="painel-direito" className={`background-placeholder  relative w-[60%] p-4`}>
                         {!srcLP && (
-                                                <div className="absolute top-0 left-0 w-full h-full grid place-items-center p-4">
+                             <div className="absolute top-0 left-0 h-full flex flex-col gap-2 justify-center items-center w-full p-16 text-center">
 
-                            <p className={``}>Selecione uma miniatura ao lado para visualizá-la aqui.</p>
-                            <p className="italic"> Algumas páginas podem não renderizar corretamente neste formato. Para uma 
+                                <p className={``}>Selecione uma miniatura ao lado para visualizá-la aqui.</p>
+                                <p className="italic text-sm text-gray-300"> Algumas páginas podem não renderizar corretamente neste formato. Para uma 
                                 visualização adequada, clique no botão "Visitar" para acessar a página diretamente.
-                            </p>
+                                </p>
                             </div>
 
                             
