@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    min-width: 0;
+    scroll-behavior: smooth;
     box-sizing: border-box;
   
 }
@@ -112,6 +112,7 @@ p, a {
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
-.background-placeholder {
-    
+.gu {
+    scroll-snap-type: x var(--tw-scroll-snap-strictness);
 }
+

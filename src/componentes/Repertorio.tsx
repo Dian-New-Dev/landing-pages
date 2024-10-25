@@ -124,16 +124,22 @@ const Repertorio: React.FC = () => {
                 </div>
                 
                 <div id="painel-direito" className={`background-placeholder  relative w-[60%] p-4`}>
-                    <div className="absolute  top-0 left-0 w-full h-full grid place-items-center p-4">
                         {!srcLP && (
+                                                <div className="absolute top-0 left-0 w-full h-full grid place-items-center p-4">
+
                             <p className={``}>Selecione uma miniatura ao lado para visualizá-la aqui.</p>
+                            <p className="italic"> Algumas páginas podem não renderizar corretamente neste formato. Para uma 
+                                visualização adequada, clique no botão "Visitar" para acessar a página diretamente.
+                            </p>
+                            </div>
 
+                            
                         )}
-                    </div>
-                    
-                    <iframe id="sites-iframe" className={`${srcLP !== '' ? 'block' : 'hidden'} static z-10 w-full h-full`} src={srcLP}></iframe>
 
-                    {srcLP && (<a className="z-10 absolute bottom-10 right-10 bg-green-600 p-2 rounded-lg pointer-events-auto opacity-50 hover:opacity-100" target="_blank" href={srcLP}>
+                    
+                    <iframe id="sites-iframe" className={`${srcLP !== '' ? 'block' : 'hidden'} static w-full h-full`} src={srcLP}></iframe>
+
+                    {srcLP && (<a className=" absolute bottom-10 right-10 bg-green-600 p-2 rounded-lg pointer-events-auto opacity-50 hover:opacity-100" target="_blank" href={srcLP}>
                         Visitar
                     </a>
                     )}

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import Topbar from "./componentes/Topbar";
 import Hero from "./componentes/Hero";
 import Footer from "./componentes/Footer";
@@ -9,29 +9,27 @@ import Valores from "./componentes/Valores";
 
 const App: React.FC = () => {
 
-    const [scrollIndex, setScrollIndex] = useState<number>(0)
-
     return (
         <div className="max-w-[1400px] m-auto">
 
             <Topbar />
             
-            <div id="scroller-horizontal" className="no-scrollbar escala snap-x snap-mandatory overflow-x-auto flex items-center gap-32  w-full">
-                <div className="snap-center flex-shrink-0 w-[100%]">
+            <div id="scroller-horizontal" className="no-scrollbar escala snap-x snap-mandatory snap-always overflow-y-auto flex items-center gap-32  w-full">
+                <div id="hero" className="snap-center  min-w-full h-full">
                     <Hero />    
                 </div>
                 
-                <div className="snap-center flex-shrink-0 w-[100%]">
+                <div id="repertorio" className="snap-center  min-w-full h-full">
                     <Repertorio />   
                 </div>   
 
-                <div className="snap-center flex-shrink-0 w-[100%]">
+                <div id="valores" className="snap-center  min-w-full h-full">
                     <Valores /> 
                 </div>      
             </div>
             
 
-            <ScrollMarker scrollIndex={scrollIndex} />
+            <ScrollMarker />
 
             <Footer />
         </div>
