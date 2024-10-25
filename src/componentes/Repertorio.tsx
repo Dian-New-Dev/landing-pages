@@ -14,9 +14,7 @@ const Repertorio: React.FC = () => {
     })
     const tagsFiltradas: string[] = Array.from(tagsPuras);
 
-    // renderizar tags
-
-    
+    // renderizar tags direto no jsx
 
     // logica para processar click nas tags
     
@@ -33,9 +31,27 @@ const Repertorio: React.FC = () => {
         
     }
 
+    //logica para renderizar thumbnails
+
+    const [listaThumbs, setListaThumbs] = useState<string[]>([])
+
     useEffect(() => {
-        console.log(tagADestacar)
-    }, [tagADestacar])
+        paginas.forEach((item) => {
+            setListaThumbs(prev => {
+                return [... prev, item.thumbnail]
+            })
+        })
+    },[tagADestacar])
+
+
+
+
+    useEffect(() => {
+        console.log(listaThumbs)
+    }, [listaThumbs])
+
+
+
 
 
 
@@ -59,10 +75,15 @@ const Repertorio: React.FC = () => {
                 <div id="painel-esquerdo" className="w-[40%] p-4 flex flex-col border-r border-gray-600/50 gap-4 h-full">
                     <div id="miniaturas-wrapper" className="flex gap-4 border-b border-gray-600/50">
                         <div id="miniaturas" className="grid-responsivo-thumbs h-[300px] w-full overflow-y-scroll no-scrollbar gap-4 p-2">
-                            
+                            {listaThumbs.map((item: string, index: number) => (
+                                
+                                <img key={index} src={item} alt="Thumbnail clicável para visualizar landing page" />    
+                            ))}  
                         </div>
 
                         <div id="scroll-buttons" className="flex flex-col justify-around">
+                            
+                            
                             <img className="w-[20px] h-[20px] hover:scale-110 " src={`./assets/icons/arrow.png`} alt="" />
 
                             
