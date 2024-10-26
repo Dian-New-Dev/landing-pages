@@ -15,24 +15,24 @@ const App: React.FC = () => {
 
 
     return (
-        <div className="max-w-[1400px] border static">
+        <div className="max-w-[1400px] max-h-[1440px] flex justify-center items-center  static">
 
             <Topbar setScrollIndex={setScrollIndex} />
             
-            <div id="scroller-horizontal" className="no-scrollbar escala snap-x snap-mandatory snap-always overflow-y-auto flex items-center gap-32 w-full">
-                <div id="hero" className="snap-center flex items-center justify-center border p-0 xl:p-24 2xl:py-[10%] min-w-full h-full lg:h-screen">
+            <div id="scroller-horizontal" className="sm:no-scrollbar sm:escala sm:snap-x sm:snap-mandatory sm:snap-always overflow-x-hidden sm:overflow-x-auto sm:overflow-y-auto flex flex-col sm:flex-row items-center gap-16 sm:gap-32 w-full max-h-[1440px]">
+                <div id="hero" className="snap-center flex items-center justify-center p-0 xl:p-24 2xl:py-[10%] min-w-full h-full lg:h-screen max-h-[1440px]">
                     <Hero setScrollIndex={setScrollIndex} />    
                 </div>
                 
-                <div id="repertorio" className="snap-center flex items-center justify-center border 2xl:py-[10%] min-w-full h-full md:h-[50%] lg:h-screen">
+                <div id="repertorio" className="snap-center flex items-center justify-center 2xl:py-[10%] min-w-full h-full md:h-[50%] lg:h-screen max-h-[1440px]">
                     <Repertorio />   
                 </div>   
 
-                <div id="valores" className="snap-center flex items-center justify-center border py-[10%] min-w-full h-full lg:h-screen">
+                <div id="valores" className="snap-center flex items-center justify-center  py-[10%] min-w-full h-full lg:h-screen max-h-[1440px]">
                     <Valores /> 
                 </div> 
 
-                <div id="contato" className="snap-center flex items-center justify-center border py-[10%] min-w-full h-full lg:h-screen">
+                <div id="contato" className="snap-center flex items-center justify-center  py-[10%] min-w-full h-full lg:h-screen max-h-[1440px]">
                     <Contato />
                 </div>     
             </div>

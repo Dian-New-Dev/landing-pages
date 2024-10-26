@@ -12,9 +12,9 @@ const Hero: React.FC<props> = ({setScrollIndex}) => {
 
 
     return (
-        <div id="hero" className="sm:scale-[0.45] md:scale-[0.5] lg:scale-[0.7] xl:scale-[1] flex items-end gap-2 2xl:gap-4 font-medium sm:p-32 md:p-24 2xl:p-0">
-            <div className=" p-2 2xl:p-4 border-t border-l border-gray-600/50 w-1/2 text-white flex flex-col gap-3 2xl:gap-6 items-start">
-                <h1 className="text-2xl 2xl:text-5xl font-bold">
+        <div id="hero" className="z-10 relative scale-[1] sm:scale-[0.45] md:scale-[0.6] lg:scale-[0.8] xl:scale-[1.1] flex items-end gap-2 2xl:gap-4 font-medium sm:p-32 md:p-24 2xl:p-0">
+            <div className="z-10 p-8 py-16 sm:py-0 sm:p-2 md:p-4 2xl:p-4 sm:border-t sm:border-l border-gray-600/50  w-full sm:w-1/2 text-white flex flex-col gap-3 md:gap-6 items-start">
+                <h1 className="text-3xl sm:text-2xl md:text-3xl 2xl:text-5xl font-bold">
                     Landing Page: o poder do marketing virtual
                     a um click de distância.
                 </h1>
@@ -47,13 +47,13 @@ const Hero: React.FC<props> = ({setScrollIndex}) => {
                 </div>
 
                 <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <span className="text-lime-700 font-bold text-xl">✓</span><p className="ml-[-10px]">Orçamento sem compromisso</p>
-                    <span className="text-lime-700 font-bold text-xl">✓</span><p className="ml-[-10px]">Preços extremamente acessíveis</p>
+                    <span className="text-lime-700 font-bold text-xl">✓</span><p className="sm:ml-[-10px]">Orçamento sem compromisso</p>
+                    <span className="text-lime-700 font-bold text-xl">✓</span><p className="sm:ml-[-10px]">Preços extremamente acessíveis</p>
                 </div>
             </div>
 
-            <div className="pr-4 border-b border-r border-gray-600/50 relative w-[50%] h-full">
-                <img className="w-[100%] brightness-90" src={`./assets/images/hero.png`} alt="Imagem de mulher sorridente usando óculos de realidade virtual interagindo com telas holográficas flutando ao seu redor" />
+            <div className="z-0 absolute md:static top-[100px] left-0 sm:relative sm:pr-4 sm:border-b sm:border-r border-gray-600/50 w-full sm:w-[50%] h-full">
+                <img className="opacity-25 md:opacity-100 origin-top scale-[2] md:scale-[1] sm:static sm:w-[100%] brightness-90" src={`./assets/images/hero.png`} alt="Imagem de mulher sorridente usando óculos de realidade virtual interagindo com telas holográficas flutando ao seu redor" />
 
             </div>
         </div>

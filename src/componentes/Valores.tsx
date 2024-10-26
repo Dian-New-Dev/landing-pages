@@ -12,7 +12,7 @@ const Valores: React.FC = () => {
     function mapearPlanos() {
         const valoresMapeados = valores.map((valor, index) => {
             return (
-            <div key={index} className=" bg-cyan-900/25 w-1/3 border border-gray-500 px-8 leading-5 py-8 rounded-[16px]">
+            <div key={index} className=" bg-cyan-900/25 sm:w-1/3 border border-gray-500 px-8 leading-5 py-8 rounded-[16px]">
                 <div className="flex flex-col items-center gap-5">
                     <div className="flex  items-center gap-2 justify-center">
                         <p className="text-4xl font-medium">{valor.tipo}</p>
@@ -49,10 +49,10 @@ const Valores: React.FC = () => {
    
 
     return (
-        <div className="sm:scale-[0.35] md:scale-[0.6] lg:scale-[0.6] xl:scale-[0.7]  2xl:scale-[0.9] px-32 text-white flex flex-col gap-4">
-            <h3 className="text-5xl text-center">Escolha seu plano</h3>
+        <div className="sm:scale-[0.35] md:scale-[0.55] lg:scale-[0.7] xl:scale-[0.85]  2xl:scale-[1] px-32 text-white flex flex-col gap-4">
+            <h3 className="text-2xl sm:text-5xl text-center">Escolha seu plano</h3>
 
-            <div className="flex gap-16">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-16">
                 {renderizar}
             </div>
 
@@ -67,7 +67,7 @@ const Valores: React.FC = () => {
                             <p className="text-lime-600 text-lg font-bold">✓</p>
                             <p>Opção de domínio gratuito</p>
                         </div>
-                        <img className="w-[20px] h-[20px]" src={`./assets/icons/information.png`} alt="Ícone de informação"
+                        <img className="hidden sm:block w-[20px] h-[20px]" src={`./assets/icons/information.png`} alt="Ícone de informação"
                             title="Sem custo com o formato: 'github.io/nome-do-seu-site/'" />
                     </div>
 
@@ -76,7 +76,7 @@ const Valores: React.FC = () => {
                             <p className="text-lime-600 text-lg font-bold">✓</p>
                             <p>Opção de hospedagem gratuita</p>
                         </div>
-                        <img className="w-[20px] h-[20px]" src={`./assets/icons/information.png`} alt="Ícone de informação"
+                        <img className="hidden sm:block w-[20px] h-[20px]" src={`./assets/icons/information.png`} alt="Ícone de informação"
                             title="Hospedagem veloz, confiável e gratuita com o serviço Github Pages (onde a presente página está hospedada)." />
                     </div>
                     <div className="w-full border border-gray-600 rounded-lg bg-cyan-900/25 text-gray-300 text-sm items-center flex gap-2 item-grid3">
@@ -84,7 +84,7 @@ const Valores: React.FC = () => {
                             <p className="text-lime-600 text-lg font-bold">✓</p>
                             <p>Garantia de responsividade</p>
                         </div>
-                        <img className="w-[20px] h-[20px]" src={`./assets/icons/information.png`} alt="Ícone de informação"
+                        <img className="hidden sm:block w-[20px] h-[20px]" src={`./assets/icons/information.png`} alt="Ícone de informação"
                             title="Seu site funcionando em qualquer dispositivo e qualquer tamanho de tela." />
                     </div>
 
@@ -93,7 +93,7 @@ const Valores: React.FC = () => {
                             <p className="text-lime-600 text-lg font-bold">✓</p>
                             <p>Otimização de SEO</p>
                         </div>
-                        <img className="w-[20px] h-[20px]" src={`./assets/icons/information.png`} alt="Ícone de informação"
+                        <img className="hidden sm:block w-[20px] h-[20px]" src={`./assets/icons/information.png`} alt="Ícone de informação"
                             title="Aplicamos as melhores técnicas de ranquamento para que sua Landing Page apareça nas pesquisas google." />
                     </div>
                 </div>

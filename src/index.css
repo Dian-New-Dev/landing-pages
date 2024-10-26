@@ -121,7 +121,7 @@ p, a {
 }
 
 .grid-responsivo-thumbs {
-    display: grid;
+
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
@@ -133,4 +133,7 @@ p, a {
 .fonte-padrao {
     font-family: initial;
 }
+
+/* logica hamburguer */
+
 
