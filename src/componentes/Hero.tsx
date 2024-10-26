@@ -12,14 +12,14 @@ const Hero: React.FC<props> = ({setScrollIndex}) => {
 
 
     return (
-        <div id="hero" className=" flex items-end gap-4 font-medium">
-            <div className="p-4 border-t border-l border-gray-600/50 w-1/2 text-white flex flex-col gap-6 items-start">
-                <h1 className="text-5xl font-bold">
+        <div id="hero" className="sm:scale-[0.45] md:scale-[0.5] lg:scale-[0.7] xl:scale-[1] flex items-end gap-2 2xl:gap-4 font-medium sm:p-32 md:p-24 2xl:p-0">
+            <div className=" p-2 2xl:p-4 border-t border-l border-gray-600/50 w-1/2 text-white flex flex-col gap-3 2xl:gap-6 items-start">
+                <h1 className="text-2xl 2xl:text-5xl font-bold">
                     Landing Page: o poder do marketing virtual
                     a um click de distância.
                 </h1>
 
-                <h2 className="text-2xl font-bold">
+                <h2 className="2xl:text-2xl font-bold">
                     Adicione uma Landing Page ao seu conjunto
                     de ferramentas para captar clientes.
                 </h2>
@@ -34,14 +34,14 @@ const Hero: React.FC<props> = ({setScrollIndex}) => {
 
 
                 <div className="flex flex-col gap-2">
-                    <button onClick={() => destacarMarcador(2)} className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">
+                    <button onClick={() => destacarMarcador(2)} className="font-bold rounded-lg p-1 2xl:px-5 2xl:py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">
                         <a href="#repertorio">
                             <p>Conferir nosso repertório <span className="text-[#d63b67]">➤</span></p>
                         </a>
                     </button>
 
                     <a href="#contato">
-                        <button onClick={() => destacarMarcador(4)} className="font-bold rounded-lg px-5 py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Fazer um orçamento <span className="fonte-padrao">☎</span> </button>
+                        <button onClick={() => destacarMarcador(4)} className="font-bold rounded-lg p-1 2xl:px-5 2xl:py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Fazer um orçamento <span className="fonte-padrao">☎</span> </button>
                     </a>
 
                 </div>

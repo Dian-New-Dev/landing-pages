@@ -52,6 +52,24 @@ p, a {
     transform: scale(1.2)
 }
 
+@media (min-width: 1536px) and (max-width: 1599px) {
+    .escala {
+        transform: scale(1.0)
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1699px) {
+    .escala {
+        transform: scale(1.1)
+    }
+}
+
+@media (min-width: 1700px) {
+    .escala {
+        transform: scale(1.2)
+    }
+}
+
 .centralizar-absoluto {
     left: 50%;
     transform: translateX(-50%);

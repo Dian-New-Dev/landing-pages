@@ -12,7 +12,7 @@ const ScrollMarker: React.FC<props> = ({scrollIndex, setScrollIndex }) => {
     }
 
     return (
-        <div className="scale-150 flex gap-2 justify-center w-full absolute bottom-[50px] mx-auto centralizar-absoluto">
+        <div className="z-50 md:scale-150 flex gap-2 justify-center w-full absolute bottom-[30px] xl:bottom-[50px] mx-auto centralizar-absoluto">
                         <div className={`${scrollIndex === 1 ? 'bg-gray-500' : 'bg-transparent'} border-2 border-gray-500 scrollMarker-forma w-[10px] h-[10px]`}>
                             <button onClick={() => destacarMarker(1)}>
                             

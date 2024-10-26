@@ -79,7 +79,7 @@ const Repertorio: React.FC = () => {
 
 
     return (
-        <div className="relative h-full rounded-[50px] p-4 text-white  flex flex-col gap-2">
+        <div className="sm:scale-[0.35] md:scale-[0.4] lg:scale-[0.6] xl:scale-[0.8] 2xl:scale-[1] relative h-full rounded-[50px] p-8 xl:p-24 2xl:p-4 text-white border border-yellow-500  flex flex-col justify-center gap-2">
             <div className="z-10 relative flex flex-col gap-2 ">
                 <h3 className="text-5xl font-bold">Nosso Repertório</h3>
                 <p className="text-gray-300">Landing Pages desenvolvidas com vários estilos,
@@ -91,13 +91,13 @@ const Repertorio: React.FC = () => {
 
             </div>
 
-            <div className="relative z-10 flex gap-4 h-full bg-[#222a35]/50 border border-gray-600/50 rounded-[40px] p-2">
+            <div id="problem" className="relative z-10 flex gap-4 h-full md:h-[400px] lg:h-[75%] bg-[#222a35]/50 border border-gray-600/50 rounded-[40px] p-2">
                 <div id="painel-esquerdo" className="w-[40%] p-4 flex flex-col border-r border-gray-600/50 gap-4 h-full">
-                    <div id="miniaturas-wrapper" className="flex gap-4 border-b border-gray-600/50">
-                        <div id="miniaturas" className="grid-responsivo-thumbs h-[300px] w-full overflow-y-scroll no-scrollbar gap-4 p-2">
+                    <div id="miniaturas-wrapper" className="flex gap-4 border-b h-[50%] border-gray-600/50 overflow-y-scroll ">
+                        <div id="miniaturas" className="grid-responsivo-thumbs h-full w-full   no-scrollbar gap-4 p-2">
                             {listaThumbs.map((item: string, index: number) => (
                                 <button key={index} onClick={() => handleThumbClick(item)}>
-                                    <img key={index} src={item} alt="Thumbnail clicável para visualizar landing page" />    
+                                    <img className="w-[100%]" key={index} src={item} alt="Thumbnail clicável para visualizar landing page" />    
                                 </button>
                             ))}  
                         </div>
@@ -113,9 +113,6 @@ const Repertorio: React.FC = () => {
                         </div>
                     </div>
 
-                    <p>Filtrar por tags:</p>
-
-                    
                     <div id="tags" className="grid-responsivo-tags p-2 gap-2">
                         {tagsFiltradas.map((item: string, index: number) => (
                             <button key={index} onClick={() => handleClickedTag(item)} className={`p-1 ${tagADestacar.includes(item) ? 'bg-cyan-600 font-normal' : 'bg-cyan-900 font-thin'}  rounded-lg`}>
@@ -125,7 +122,7 @@ const Repertorio: React.FC = () => {
                     </div>
                 </div>
                 
-                <div id="painel-direito" className={`background-placeholder  relative w-[60%] p-4`}>
+                <div id="painel-direito" className={`background-placeholder h-full  relative w-[60%] p-4`}>
                         {!srcLP && (
                              <div className="absolute top-0 left-0 h-full flex flex-col gap-2 justify-center items-center w-full p-16 text-center">
 

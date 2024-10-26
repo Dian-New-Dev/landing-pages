@@ -2,8 +2,8 @@ import React from "react";
 
 const Contato: React.FC = () => {
     return (
-        <div className="w-full h-full grid place-items-center">
-            <div className="border border-gray-600/50 bg-cyan-900/25 rounded-[40px] w-[320px] h-[400px] flex flex-col justify-center gap-8 p-4">
+        <div className="sm:scale-[0.6] md:scale-1 w-full h-full flex justify-center items-center">
+            <div className="border border-gray-600/50 bg-cyan-900/25 rounded-[40px] w-[320px] py-[5%] xl:py-0 xl:h-[400px] flex flex-col justify-center gap-8 p-4">
                 <div className="flex flex-col gap-2 items-center">
                     <h3 className="text-2xl text-white">Obrigado pela Visita!</h3>
                     <p className="text-gray-300 text-center">Caso queira estabelecer contato, sinta-se

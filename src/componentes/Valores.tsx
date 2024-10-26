@@ -12,7 +12,7 @@ const Valores: React.FC = () => {
     function mapearPlanos() {
         const valoresMapeados = valores.map((valor, index) => {
             return (
-            <div key={index} className="bg-cyan-900/25 w-1/3 border border-gray-500 px-8 leading-5 py-8 rounded-[16px]">
+            <div key={index} className=" bg-cyan-900/25 w-1/3 border border-gray-500 px-8 leading-5 py-8 rounded-[16px]">
                 <div className="flex flex-col items-center gap-5">
                     <div className="flex  items-center gap-2 justify-center">
                         <p className="text-4xl font-medium">{valor.tipo}</p>
@@ -49,7 +49,7 @@ const Valores: React.FC = () => {
    
 
     return (
-        <div className="px-32 text-white flex flex-col gap-4">
+        <div className="sm:scale-[0.35] md:scale-[0.6] lg:scale-[0.6] xl:scale-[0.7]  2xl:scale-[0.9] px-32 text-white flex flex-col gap-4">
             <h3 className="text-5xl text-center">Escolha seu plano</h3>
 
             <div className="flex gap-16">
