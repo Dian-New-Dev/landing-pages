@@ -136,4 +136,21 @@ p, a {
 
 /* logica hamburguer */
 
+.hamburguer-transition {
+    transition: left 0.7s ease-in-out;
+}
+
+.transicao-gradiente {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.568) 50%, rgba(0, 0, 0, 0.575) 75%);
+    transition: opacity 0.7s ease;
+}
+
+.sem-gradiente {
+    opacity: 0;
+}
+
+.gradiente {
+    opacity: 1;
+}
+
 
