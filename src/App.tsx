@@ -49,6 +49,33 @@ const App: React.FC = () => {
     //controlar destaque do marcador de scroll
     const [scrollIndex, setScrollIndex] = useState<number>(1)
 
+    //lógica para scroll via setas
+    const [scroll, setScroll] = useState<HTMLElement | null>()
+    useEffect(() => {
+        const scrollDiv = document.getElementById('scroller-horizontal') as HTMLElement | null;
+        setScroll(scrollDiv)
+    }, [])
+
+    function clicouSeta(direcao:string) {
+        if (direcao === 'esq') {
+            if (scroll) {
+                scroll.scrollBy({
+                    left: -50,
+                    behavior: 'smooth'
+                });
+            }
+
+        } else {
+            if (scroll) {
+                scroll.scrollBy({
+                    left: 50,
+                    behavior: 'smooth'
+                });
+            }
+
+        }   
+    }
+
 
     return (
         <div className="max-w-[1400px] max-h-[1440px] flex justify-center items-center  static">
@@ -77,7 +104,7 @@ const App: React.FC = () => {
             </div>
             
 
-            <ScrollMarker scrollIndex={scrollIndex} setScrollIndex={setScrollIndex} />
+                <ScrollMarker scrollIndex={scrollIndex} setScrollIndex={setScrollIndex} clicouSeta={clicouSeta} />
 
             <Footer />
         </div>
