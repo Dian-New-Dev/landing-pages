@@ -17,11 +17,11 @@ const ScrollMarker: React.FC<props> = ({scrollIndex, setScrollIndex, clicouSeta 
             <div className="absolute bottom-6 w-full h-full flex items-center justify-center gap-2">
 
                 <button onClick={() => clicouSeta("esq")}>
-                    <img className="w-[30px] rotate-180" src="./assets/icons/flecha.png" alt="Ícone de flecha apontando para a esquerda." />
+                    <img className="w-[30px] scale-[1] hover:scale-[1.01] rotate-180" src="./assets/icons/flecha.png" alt="Ícone de flecha apontando para a esquerda." />
                 </button>
 
                 <button onClick={() => clicouSeta("dir")}>
-                    <img className="w-[30px]" src="./assets/icons/flecha.png" alt="Ícone de flecha apontando para a direita." />
+                    <img className="w-[30px] scale-[1] hover:scale-[1.01]" src="./assets/icons/flecha.png" alt="Ícone de flecha apontando para a direita." />
                 </button>
 
             </div>

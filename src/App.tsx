@@ -78,7 +78,7 @@ const App: React.FC = () => {
 
 
     return (
-        <div className="max-w-[1400px] max-h-[1440px] flex justify-center items-center  static">
+        <div className="scroll-smooth max-w-[1400px] max-h-[1440px] flex justify-center items-center  static">
 
             {!abriuNoMobile && <Topbar setScrollIndex={setScrollIndex} />}
             
