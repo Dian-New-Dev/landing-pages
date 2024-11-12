@@ -92,7 +92,16 @@ const Repertorio: React.FC = () => {
             </div>
 
             <div className="relative z-10 flex flex-col sm:flex-row gap-16 sm:gap-4 h-full md:h-[400px] lg:h-[75%] bg-[#222a35]/50 border border-gray-600/50 rounded-[40px] p-2">
-                <div id="painel-esquerdo" className="w-full sm:w-[40%] sm:p-4 flex flex-col sm:border-r border-gray-600/50 gap-4 h-[600px] md:h-full ">
+                <div id="painel-esquerdo" className="relative w-full sm:w-[40%] sm:p-4 flex flex-col sm:border-r border-gray-600/50 gap-4 h-[600px] md:h-full ">
+                        <div id="scroll-buttons" className="absolute top-[40%] right-[2%] hidden sm:flex flex-col justify-around">
+                            
+                            
+                            <img className="w-[20px] h-[20px] hover:scale-110 " src={`./assets/icons/arrow.png`} alt="" />
+
+                            
+                            
+                            <img className="w-[20px] h-[20px] pointer-events-auto hover:scale-110  rotate-180" src={`./assets/icons/arrow.png`} alt="" />
+                        </div>
                     <div id="miniaturas-wrapper" className="flex gap-4 border-b h-full sm:h-[50%] no-scrollbar border-gray-600/50 overflow-x-scroll sm:overflow-x-hidden sm:overflow-y-scroll ">
                         
                         <div id="miniaturas-padrao" className="hidden sm:grid grid-responsivo-thumbs  w-full   no-scrollbar gap-4 p-2">
@@ -115,15 +124,6 @@ const Repertorio: React.FC = () => {
                             ))}  
                         </div>
 
-                        <div id="scroll-buttons" className="hidden sm:flex flex-col justify-around">
-                            
-                            
-                            <img className="w-[20px] h-[20px] hover:scale-110 " src={`./assets/icons/arrow.png`} alt="" />
-
-                            
-                            
-                            <img className="w-[20px] h-[20px] pointer-events-auto hover:scale-110  rotate-180" src={`./assets/icons/arrow.png`} alt="" />
-                        </div>
                     </div>
 
                     <div id="tags" className="grid-responsivo-tags p-2 gap-2  sm:h-1/2">
