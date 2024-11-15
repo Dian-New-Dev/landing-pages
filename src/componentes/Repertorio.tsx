@@ -78,6 +78,34 @@ const Repertorio: React.FC = () => {
     }, [srcLP])
 
 
+    //logica para scrollar painel de thumbnails
+    const [scroll, setScroll] = useState<HTMLElement | null>()
+    useEffect(() => {
+        const scrollDivVert = document.getElementById('miniaturas-wrapper') as HTMLElement | null;
+        setScroll(scrollDivVert)
+    }, [])
+
+    function clicouSetasVerticais(direcao:string) {
+        if (direcao === 'up') {
+            if (scroll) {
+                scroll.scrollBy({
+                    top: -50,
+                    behavior: 'smooth'
+                });
+            }
+
+        } else {
+            if (scroll) {
+                scroll.scrollBy({
+                    top: 50,
+                    behavior: 'smooth'
+                });
+            }
+
+        }   
+    }
+
+
     return (
         <div className="sm:scale-[0.35] md:scale-[0.55] lg:scale-[0.75] xl:scale-[0.95] 2xl:scale-[1] relative h-full rounded-[50px] p-8 xl:p-24 2xl:p-4 text-white  flex flex-col justify-center gap-2">
             <div className="z-10 relative flex flex-col gap-2 ">
@@ -95,12 +123,14 @@ const Repertorio: React.FC = () => {
                 <div id="painel-esquerdo" className="relative w-full sm:w-[40%] sm:p-4 flex flex-col sm:border-r border-gray-600/50 gap-4 h-[600px] md:h-full ">
                         <div id="scroll-buttons" className="absolute top-[40%] right-0 hidden sm:flex flex-col justify-around">
                             
-                            
-                            <img className="pointer-events-auto w-[20px] h-[20px] hover:scale-110 " src={`./assets/icons/arrow.png`} alt="" />
+                            <button onClick={() => clicouSetasVerticais('up')} className="mb-2">
+                                <img className="pointer-events-auto w-[20px] h-[20px] hover:scale-110 " src={`./assets/icons/arrow.png`} alt="Flecha apontando para cima." />
+                            </button>
 
+                            <button onClick={() => clicouSetasVerticais('down')} className="mb-2">
+                                <img className="pointer-events-auto w-[20px] h-[20px] hover:scale-110  rotate-180" src={`./assets/icons/arrow.png`} alt="Flecha apontando para baixo." />
+                            </button>
                             
-                            
-                            <img className="pointer-events-auto w-[20px] h-[20px] hover:scale-110  rotate-180" src={`./assets/icons/arrow.png`} alt="" />
                         </div>
                     <div id="miniaturas-wrapper" className="flex gap-4 border-b h-full sm:h-[50%] no-scrollbar border-gray-600/50 overflow-x-scroll sm:overflow-x-hidden sm:overflow-y-scroll ">
                         
