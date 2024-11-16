@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import paginas from "../data/paginas";
+import arrowIcon from '../assets/icons/arrow.png'
 
 const Repertorio: React.FC = () => {
     
@@ -124,11 +125,11 @@ const Repertorio: React.FC = () => {
                         <div id="scroll-buttons" className="absolute top-[40%] right-0 hidden sm:flex flex-col justify-around">
                             
                             <button onClick={() => clicouSetasVerticais('up')} className="mb-2">
-                                <img className="pointer-events-auto w-[20px] h-[20px] hover:scale-110 " src={`./assets/icons/arrow.png`} alt="Flecha apontando para cima." />
+                                <img className="pointer-events-auto w-[20px] h-[20px] hover:scale-110 " src={arrowIcon} alt="Flecha apontando para cima." />
                             </button>
 
                             <button onClick={() => clicouSetasVerticais('down')} className="mb-2">
-                                <img className="pointer-events-auto w-[20px] h-[20px] hover:scale-110  rotate-180" src={`./assets/icons/arrow.png`} alt="Flecha apontando para baixo." />
+                                <img className="pointer-events-auto w-[20px] h-[20px] hover:scale-110  rotate-180" src={arrowIcon} alt="Flecha apontando para baixo." />
                             </button>
                             
                         </div>

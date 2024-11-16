@@ -1,4 +1,7 @@
 import React from "react";
+import linkedinIcon from '../assets/icons/linkedin.png';
+import githubIcon from '../assets/icons/github.png';
+import wppIcon from '../assets/icons/whatsapp.png';
 
 const Contato: React.FC = () => {
     return (
@@ -14,19 +17,19 @@ const Contato: React.FC = () => {
                 <div className="flex gap-4 justify-center items-center">
                     <div>
                         <a target="_blank" href="https://www.linkedin.com/in/diego-antunes-339648293/">
-                            <img className="w-[50px] border rounded-[50px] border-gray-600 hover:scale-110" src={`./assets/icons/linkedin.png`} alt="Ícone do linkedin" />
+                            <img className="w-[50px] border rounded-[50px] border-gray-600 hover:scale-110" src={linkedinIcon} alt="Ícone do linkedin" />
                         </a>
                     </div>
 
                     <div>
                         <a target="_blank" href="https://github.com/Dian-New-Dev">
-                            <img className="w-[50px] border rounded-[50px] border-gray-600 hover:scale-110" src={`./assets/icons/github.png`} alt="Ícone do Github" />
+                            <img className="w-[50px] border rounded-[50px] border-gray-600 hover:scale-110" src={githubIcon} alt="Ícone do Github" />
                         </a>
                     </div>
 
                     <div>
                         <a target="_blank" href="https://api.whatsapp.com/send?phone=5567991592199&text=Ol%C3%A1,%20seja%20bem%20vindo!%20Caso%20tenha%20interesse%20em%20adquirir%20uma%20Landing%20Page%20para%20o%20seu%20neg%C3%B3cio,%20ou%20tenha%20d%C3%BAvidas%20sobre%20meus%20servi%C3%A7os,%20sinta-se%20livre%20para%20mandar%20uma%20mensagem.%20Responderei%20o%20quanto%20antes!">
-                            <img className="w-[50px] border rounded-[50px] border-gray-600 hover:scale-110" src={`./assets/icons/whatsapp.png`} alt="Ícone do WhatsApp" />
+                            <img className="w-[50px] border rounded-[50px] border-gray-600 hover:scale-110" src={wppIcon} alt="Ícone do WhatsApp" />
                         </a>
                     </div>
                 </div>

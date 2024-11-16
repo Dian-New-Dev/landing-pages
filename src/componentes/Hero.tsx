@@ -1,4 +1,5 @@
 import React from "react";
+import heroImg from '../assets/images/hero.png'
 
 interface props {
     setScrollIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -53,7 +54,7 @@ const Hero: React.FC<props> = ({setScrollIndex}) => {
             </div>
 
             <div className="z-0 absolute md:static top-[100px] left-0 sm:relative sm:pr-4 sm:border-b sm:border-r border-gray-600/50 w-full sm:w-[50%] h-full">
-                <img className="opacity-25 md:opacity-100 origin-top scale-[2] md:scale-[1] sm:static sm:w-[100%] brightness-90" src={`./assets/images/hero.png`} alt="Imagem de mulher sorridente usando óculos de realidade virtual interagindo com telas holográficas flutando ao seu redor" />
+                <img className="opacity-25 md:opacity-100 origin-top scale-[2] md:scale-[1] sm:static sm:w-[100%] brightness-90" src={heroImg} alt="Imagem de mulher sorridente usando óculos de realidade virtual interagindo com telas holográficas flutando ao seu redor" />
 
             </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import logoImg from '../assets/images/logo.png'
 
 interface props {
     setScrollIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -19,7 +20,7 @@ const Topbar: React.FC<props> = ({setScrollIndex}) => {
             <div className=" w-1/2">
                 <button onClick={() => destacarMarker(1)}>
                     <a href="#hero">
-                        <img className="w-[30px] lg:w-[50px] xl:w-[75px]" src="./assets/images/logo.png" alt="Logo da Empresa 'DA Web Dev'" />
+                        <img className="w-[30px] lg:w-[50px] xl:w-[75px]" src={logoImg} alt="Logo da Empresa 'DA Web Dev'" />
                     </a>
                 </button>
                 

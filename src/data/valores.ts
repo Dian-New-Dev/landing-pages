@@ -1,3 +1,7 @@
+import muscleIcon from '../assets/icons/muscle.png';
+import starIcon from '../assets/icons/star.png';
+import startupIcon from '../assets/icons/startup.png'
+
 interface items {
     item: string;
     legenda: string;
@@ -13,7 +17,7 @@ interface valores {
 const valores: valores[] = [
     {
         tipo: "Básico",
-        icone: "./assets/icons/muscle.png",
+        icone: muscleIcon,
         preco: "R$ 199,99",
         inclui: [
             {item: '1 Landing Page', legenda: 'Página moderna, cativante e efetiva.'},
@@ -23,7 +27,7 @@ const valores: valores[] = [
     },
     {
         tipo: "Médio",
-        icone: "./assets/icons/star.png",
+        icone: starIcon,
         preco: "R$ 299,99",
         inclui: [
             {item: '1 Landing Page', legenda: 'Página moderna, cativante e efetiva.'},
@@ -34,7 +38,7 @@ const valores: valores[] = [
     },
     {
         tipo: "Avançado",
-        icone: "./assets/icons/startup.png",
+        icone: startupIcon,
         preco: "R$ 399,99",
         inclui: [
             {item: '1 Landing Page', legenda: 'Página moderna, cativante e efetiva.'},
