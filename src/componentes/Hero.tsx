@@ -1,5 +1,6 @@
 import React from "react";
-import heroImg from '../assets/images/hero.png'
+import heroImg from '../assets/images/hero.png';
+import phoneIcon from '../assets/icons/call.png'
 
 interface props {
     setScrollIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -42,7 +43,9 @@ const Hero: React.FC<props> = ({setScrollIndex}) => {
                     </button>
 
                     <a href="#contato">
-                        <button onClick={() => destacarMarcador(4)} className="font-bold rounded-lg p-1 2xl:px-5 2xl:py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600">Fazer um orçamento <span className="fonte-padrao">☎</span> </button>
+                        <button onClick={() => destacarMarcador(4)} className="font-bold rounded-lg p-1 2xl:px-5 2xl:py-3 bg-green-500 border border-white/25 hover:scale-105 hover:bg-green-600 flex gap-1 items-center">Fazer um orçamento
+                            <img className="w-[17px]" src={phoneIcon} alt="Ícone de Telefone" />
+                        </button>
                     </a>
 
                 </div>
