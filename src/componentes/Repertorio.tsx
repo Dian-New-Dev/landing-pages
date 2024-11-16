@@ -122,7 +122,7 @@ const Repertorio: React.FC = () => {
 
             <div className="relative z-10 flex flex-col sm:flex-row gap-16 sm:gap-4 h-full md:h-[400px] lg:h-[75%] bg-[#222a35]/50 border border-gray-600/50 rounded-[40px] p-2">
                 <div id="painel-esquerdo" className="relative w-full sm:w-[40%] sm:p-4 flex flex-col sm:border-r border-gray-600/50 gap-4 h-[600px] md:h-full ">
-                        <div id="scroll-buttons" className="absolute top-[40%] right-0 hidden sm:flex flex-col justify-around">
+                        <div id="scroll-buttons" className="absolute top-[20%] right-0 hidden sm:flex flex-col justify-around">
                             
                             <button onClick={() => clicouSetasVerticais('up')} className="mb-2">
                                 <img className="pointer-events-auto w-[20px] h-[20px] hover:scale-110 " src={arrowIcon} alt="Flecha apontando para cima." />
@@ -159,8 +159,10 @@ const Repertorio: React.FC = () => {
 
                     <div id="tags" className="grid-responsivo-tags p-2 gap-2  sm:h-1/2">
                         {tagsFiltradas.map((item: string, index: number) => (
-                            <button key={index} onClick={() => handleClickedTag(item)} className={`p-1 ${tagADestacar.includes(item) ? 'bg-cyan-600 font-normal' : 'bg-cyan-900 font-thin'}  rounded-lg`}>
-                                {item}
+                            <button key={index} onClick={() => handleClickedTag(item)} className={` ${tagADestacar.includes(item) ? 'bg-cyan-600 font-normal' : 'bg-cyan-900 font-thin'} h-[30px]  rounded-lg hover:scale-[1.05]`}>
+                                <p className="font-bold">
+                                    {item}
+                                </p>
                             </button>
                         ))}
                     </div>
